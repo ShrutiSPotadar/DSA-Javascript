@@ -1,11 +1,20 @@
 class Solution {
     pattern1(n) {
-        for(let i=0;i<n;i++){
+        let pattern = "";
+
+        for (let i = 0; i < n; i++) {
             let row = "";
-            for(let j =0;j<n;j++){
+
+            for (let j = 0; j < n; j++) {
                 row += "*";
             }
-        console.log(row);
+
+            pattern += row + "\n";
         }
+
+        return pattern;
     }
 }
+
+const output = new Solution();
+console.log(output.pattern1(5));
